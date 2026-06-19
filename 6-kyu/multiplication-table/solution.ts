@@ -45,9 +45,9 @@ export function multiplicationTable3(size: number): number[][] {
 }
 
 export function multiplicationTable4(size: number): number[][] {
-	return Array.from({ length: size }, (_, index) =>
-		Array.from({ length: size }, (_, index) => index + 1).map(
-			(el) => el * (index + 1),
+	return Array.from({ length: size }, (_, rowIndex) =>
+		Array.from({ length: size }, (_, elIndex) => elIndex + 1).map(
+			(el) => el * (rowIndex + 1),
 		),
 	);
 }
